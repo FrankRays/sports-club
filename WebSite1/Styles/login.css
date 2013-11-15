@@ -1,0 +1,36 @@
+﻿.pageright
+{
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 923px;
+}
+.pageleft
+{
+    
+    padding-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 344px;
+    height: 161px;
+}
+.pagemiddle
+{
+    
+    margin-left:auto;
+    margin-right:auto;
+    width: 100px;
+    height: 84px;
+}
+.newuser
+{
+            width:100px;
+            height:30px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:5px;
+            margin-top:10px;
+            border-radius:15px;
+            cursor: pointer;
+}

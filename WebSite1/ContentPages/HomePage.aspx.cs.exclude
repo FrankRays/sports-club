@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class ContentPages_HomePage : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+    protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+{
+    if (e.Row.RowType == DataControlRowType.DataRow)
+    {
+        string id = ((GridView)sender).DataKeys[e.Row.RowIndex].Value.ToString();
+        e.Row.Attributes["onClick"] = "location.href='Default.aspx?id=" + id + "'";    
+    }
+}
+}

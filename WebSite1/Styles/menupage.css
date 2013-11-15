@@ -1,0 +1,15 @@
+﻿
+.left
+{
+    float:left;
+    width:20%;
+}
+.submenubutton
+{
+    width:200px;
+            margin-left:10px;
+            margin-right:10px;
+            border:5px;
+            height:30px;
+            cursor: pointer;
+}

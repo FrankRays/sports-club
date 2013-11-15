@@ -1,0 +1,76 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="ContentPages_Default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        #password
+        {
+            margin-top: 9px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <br />
+    <!DOCTYPE html>
+<html>
+<head>
+<title>ASP Login</title>
+<link href="Site.css" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+
+<%
+username = ""
+password = ""
+ErrorMessage = ""
+
+if request.form <> "" then
+  username = Request.Form("username")
+  password = Request.Form("password")
+  if username = "" or password = "" then
+    ErrorMessage = "You must specify a username and password."
+  else
+    set conn = Server.CreateObject("ADODB.Connection")
+    conn.Provider = "Microsoft.Jet.OLEDB.4.0"
+    conn.Open("F:\projects\WPL Project\WebSite1\App_Data\Database\customer.mdb")
+    set rs = Server.CreateObject("ADODB.recordset")
+    rs.Open "Select * FROM Users WHERE Email = '" & username & "'", conn
+    if rs.EOF = false then 
+      if rs.fields("Password") = password then
+        Response.Redirect("Default.asp")
+      end if
+    end if 
+  ErrorMessage = "Login failed"
+  end if 
+end if
+
+if ErrorMessage <> "" then
+  response.write("<p>" & ErrorMessage & "</p>") 
+  response.write("<p>Please correct the errors and try again.</p>") 
+end if
+%>
+
+<h1 style="margin-top: 0px">&nbsp;&nbsp;&nbsp; Login</h1>
+<form method="post" action="">
+<fieldset style="height: 311px; width: 648px; margin-left: 27px">
+<legend>Returning User</legend>
+    <asp:Button ID="Button12" runat="server" Height="29px" 
+        style="margin-left: 20px" Text="New User" Width="129px" />
+    <asp:Button ID="Button13" runat="server" Height="28px" 
+        style="margin-left: 22px; margin-top: 29px" Text="Returning user" 
+        Width="129px" />
+    <asp:Login ID="Login1" runat="server" Height="256px" Width="319px" 
+        style="margin-left: 307px; margin-top: 0px">
+    </asp:Login>
+</fieldset>
+</form>
+
+
+    <asp:Image ID="Image5" runat="server" Height="324px" style="margin-left: 11px" 
+        Width="386px" />
+</div>
+</body>
+</html>
+    <br />
+</asp:Content>
+

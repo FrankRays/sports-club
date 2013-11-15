@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPages_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link rel="stylesheet" href="../Styles/master.css" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header">
+        <div class="headerleft">
+        <img alt="logo" class="style1" src="../Images/logo.jpg" />
+        <asp:TextBox ID="TextBox1" class="title" runat="server" Width="205px" ReadOnly="true">Sports Club</asp:TextBox>
+        </div>
+        <div class="headerright">
+        <div class="headerighttop">
+        <asp:Button ID="Button1" class="headerbutton" runat="server" Text="Login"
+                onclick="Button1_Click"/>
+        <asp:Button ID="Button2" class="headerbutton" runat="server" Text="Cart" />
+        <asp:Button ID="Button12" class="headerbutton" runat="server" Text="My Account" 
+                Style="margin-right:3px" onclick="Button12_Click" />
+        <asp:TextBox ID="TextBox3" class="status" runat="server" ReadOnly="true" 
+                Style="text-align: left" Width="120px">Please Login</asp:TextBox>
+        <div class="headerrightbottom">
+        <asp:TextBox ID="TextBox2" class="headersearch" runat="server" Width="480px">Search</asp:TextBox>
+            
+        </div>
+        </div>
+        </div> 
+        </div>
+        
+        <div class="headermenu">
+        <hr />
+        <asp:Button ID="Button7" class="menu" runat="server" Text="Shoes" 
+                onclick="Button7_Click"/>
+        <asp:Button ID="Button8" class="menu" runat="server" Text="Clothes" 
+                onclick="Button8_Click"/>
+         <asp:Button ID="Button9" class="menu" runat="server" Text= "Equipment" 
+                onclick="Button9_Click"/>
+         <asp:Button ID="Button11" class="menu" runat="server" Text= "Accessories" 
+                onclick="Button11_Click"/>
+        <asp:Button ID="Button10" class="menu" runat="server" Text="Soles" 
+                onclick="Button10_Click"/>
+            
+        </div>
+        <hr />
+        <div class="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+        <hr />
+        <div class="footerleft">
+         <asp:Button ID="Button3" class="footermenu" runat="server" Text="About Us" />
+        <asp:Button ID="Button4" class="footermenu" runat="server" Text="Help" />
+         <asp:Button ID="Button5" class="footermenu" runat="server" Text="Store Locator" />
+        <asp:Button ID="Button6" class="footermenu" runat="server" Text="Contact Us" />
+        </div>
+        <div class="footerright">
+        <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/fb.jpg" 
+                Width="30px" />
+        <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/Images/twitter.jpg" 
+                Width="30px" />
+        <asp:Image ID="Image4" runat="server" Height="30px" ImageUrl="~/Images/rss.jpg" 
+                Width="30px" />
+        </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

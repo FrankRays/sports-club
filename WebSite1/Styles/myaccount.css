@@ -1,0 +1,31 @@
+﻿.field1
+{
+    width:600px;
+    height:200px;
+    margin-left:25px;
+    margin-right:25px;
+}
+.field2
+{
+    width:600px;
+    height:200px;
+    margin-left:25px;
+    margin-right:25px;
+    padding-left:20px;
+}
+.info
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.accountleft
+{
+    float:left;
+}
+.ad
+{
+    padding-left:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
