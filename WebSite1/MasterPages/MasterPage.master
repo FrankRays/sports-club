@@ -57,10 +57,13 @@
         <div class="footer">
         <hr />
         <div class="footerleft">
-         <asp:Button ID="Button3" class="footermenu" runat="server" Text="About Us" />
-        <asp:Button ID="Button4" class="footermenu" runat="server" Text="Help" />
+         <asp:Button ID="Button3" class="footermenu" runat="server" Text="About Us" 
+                onclick="Button3_Click" />
+        <asp:Button ID="Button4" class="footermenu" runat="server" Text="Help" 
+                onclick="Button4_Click" />
          <asp:Button ID="Button5" class="footermenu" runat="server" Text="Store Locator" />
-        <asp:Button ID="Button6" class="footermenu" runat="server" Text="Contact Us" />
+        <asp:Button ID="Button6" class="footermenu" runat="server" Text="Contact Us" 
+                onclick="Button6_Click" />
         </div>
         <div class="footerright">
         <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/fb.jpg" 

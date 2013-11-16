@@ -88,4 +88,16 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
         AppGlobal.selectedsubmenu = "21";
         Response.Redirect("menu.aspx");
     }
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("abt us.aspx");
+    }
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("HelpUs.aspx");
+    }
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("contactUs.aspx");
+    }
 }
