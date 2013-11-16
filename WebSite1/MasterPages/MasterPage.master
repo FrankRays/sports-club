@@ -14,7 +14,8 @@
     <div>
         <div class="header">
         <div class="headerleft">
-        <img alt="logo" class="style1" src="../Images/logo.jpg" />
+        <asp:Imagebutton alt="logo" class="style1" src="../Images/logo.jpg" runat="server" 
+                onclick="Unnamed1_Click" />
         <asp:TextBox ID="TextBox1" class="title" runat="server" Width="205px" ReadOnly="true">Sports Club</asp:TextBox>
         </div>
         <div class="headerright">

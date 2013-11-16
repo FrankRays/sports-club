@@ -100,4 +100,8 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
     {
         Response.Redirect("contactUs.aspx");
     }
+    protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("home.aspx");
+    }
 }
