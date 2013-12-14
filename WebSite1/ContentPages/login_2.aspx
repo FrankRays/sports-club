@@ -70,7 +70,8 @@
     </div>
     <div class="pagemiddle">
     <br /><br />
-    <asp:Button ID="Button1"  runat="server" Text="New User" class="newuser" />
+    <asp:Button ID="Button1"  runat="server" Text="New User" class="newuser" 
+            onclick="Button1_Click" />
     </div>
     <div class="pageright">
     <asp:Image ID="Image5" runat="server" Height="194px" Width="918px" class="ad"/>

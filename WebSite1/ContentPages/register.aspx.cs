@@ -22,31 +22,44 @@ public partial class ContentPages_register : System.Web.UI.Page
         string emailaddr = email.Text;
         string username = un.Text;
         string pw = password.Text;
-        
-        string s;
-        s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-        SqlConnection con = new SqlConnection(s);
-        con.Open();
-        string query1 = "select count(*) from customers";
-        SqlCommand cmd1 = new SqlCommand(query1, con);
-        int count = (int)cmd1.ExecuteScalar();
-        string query = "insert into customers values ('" + firstname + "','" + lastname + "','" + middlename + "','" + emailaddr + "','" + username + "','" + pw + "',1,"+count+")";
-        SqlCommand cmd = new SqlCommand(query, con);
-        
-        int CurrentName;
-        CurrentName = cmd.ExecuteNonQuery();
-        if (CurrentName == 1)
+        try
         {
-            fn.Text = "";
-            mn.Text = "";
-            ln.Text = "";
-            un.Text = "";
-            password.Text = "";
-            email.Text = "";
-            status.Text = "Registration Successfull. Please login.";
-            status.Visible = true;
+            string s;
+            s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection con = new SqlConnection(s);
+            con.Open();
+            string query1 = "select count(*) from customers";
+            SqlCommand cmd1 = new SqlCommand(query1, con);
+            int count = (int)cmd1.ExecuteScalar();
+            string query = "insert into customers values ('" + firstname + "','" + lastname + "','" + middlename + "','" + emailaddr + "','" + username + "','" + pw + "',1," + count + ")";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            int CurrentName;
+            CurrentName = cmd.ExecuteNonQuery();
+            if (CurrentName == 1)
+            {
+                fn.Text = "";
+                mn.Text = "";
+                ln.Text = "";
+                un.Text = "";
+                password.Text = "";
+                email.Text = "";
+                status.Text = "Registration Successfull. Please login.";
+                status.Visible = true;
+            }
+            else
+            {
+                fn.Text = "";
+                mn.Text = "";
+                ln.Text = "";
+                un.Text = "";
+                password.Text = "";
+                email.Text = "";
+                status.Text = "Registration Failed. Please try again";
+                status.Visible = true;
+            }
         }
-        else
+        catch (Exception ex)
         {
             fn.Text = "";
             mn.Text = "";

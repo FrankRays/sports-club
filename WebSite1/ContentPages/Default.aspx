@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
-    Default Page.
+    Please Click <a href = "home.aspx">HERE</a> if not automatically redirected.
     <br />
 </asp:Content>
 
