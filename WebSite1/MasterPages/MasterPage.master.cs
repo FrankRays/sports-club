@@ -9,7 +9,7 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (AppGlobal.isCustomerLoggedIn == true && !AppGlobal.LoggedInCustomerId.Equals(""))
+        if (AppGlobal.isCustomerLoggedIn == true && AppGlobal.LoggedInCustomerId != -1)
         {
             Button1.Text = "Logout";
             TextBox3.Visible = true;
@@ -51,7 +51,7 @@ public partial class MasterPages_MasterPage : System.Web.UI.MasterPage
         {
             Button1.Text = "Login";
             AppGlobal.isCustomerLoggedIn = false;
-            AppGlobal.LoggedInCustomerId = "";
+            AppGlobal.LoggedInCustomerId = -1;
             AppGlobal.LoggedInCustomerName = "";
             Button12.Enabled = false;
             Response.Redirect("home.aspx");

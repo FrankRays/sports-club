@@ -1,0 +1,32 @@
+﻿fieldset
+{
+    width:40%;
+}
+li
+{
+    margin:10px;
+    list-style:none;
+}
+input[text]
+{   
+    text-align:left;  
+}
+input[password]
+{  
+    text-align:left;   
+}
+label
+{
+  display: block;
+  float: left;
+  width : 120px;    
+}
+
+.container
+{
+    margin-left:50px;
+}
+input[button]
+{
+    text-align:center;
+}

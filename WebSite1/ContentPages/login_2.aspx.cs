@@ -24,8 +24,8 @@ public partial class ContentPages_login_2 : System.Web.UI.Page
             string sqlUserName;
             sqlUserName = "SELECT id,username,password FROM customers WHERE username ='" + username + "' AND password ='" + pwd + "'";
             SqlCommand cmd = new SqlCommand(sqlUserName, con);
-            string CurrentName;
-            CurrentName = (string)cmd.ExecuteScalar();
+            int CurrentName;
+            CurrentName = (int)cmd.ExecuteScalar();
             if (CurrentName != null)
             {
                 AppGlobal.isCustomerLoggedIn = true;

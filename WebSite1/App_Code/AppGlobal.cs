@@ -9,7 +9,7 @@ using System.Web;
 public static class AppGlobal
 {
     public static bool isCustomerLoggedIn = false;
-    public static string LoggedInCustomerId = "";
+    public static int LoggedInCustomerId = -1;
     public static string LoggedInCustomerName = "";
     public static string selectedMenu = "";
     public static string selectedsubmenu = "*";
