@@ -5,7 +5,7 @@
  <link rel="stylesheet" href="../Styles/AddItem.css" type="text/css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+<asp:Label ID="status" Visible="false" runat="server">status</asp:Label>
 <fieldset>
 <legend>Add New Item</legend>
 <div class="container">

@@ -11,7 +11,7 @@ public partial class ContentPages_AddItem : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        this.status.Visible = false;
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -39,9 +39,19 @@ public partial class ContentPages_AddItem : System.Web.UI.Page
             SqlCommand cmd3 = new SqlCommand(query3, con);
             itemid = (int)cmd3.ExecuteScalar();
             this.newitemcontrol.updateFile(itemid);
+            this.status.Visible = true;
+            this.status.Text = "Item Successfully added for sale";
+            this.newitemcontrol.TextBox1Value = "";
+            this.newitemcontrol.TextBox2Value="";
+            this.newitemcontrol.TextBox3Value="";
         }
         else
         {
+            this.status.Visible = true;
+            this.status.Text = "Item could not be added.Please try again.";
+            this.newitemcontrol.TextBox1Value = "";
+            this.newitemcontrol.TextBox2Value = "";
+            this.newitemcontrol.TextBox3Value = "";
         }
     }
 }
