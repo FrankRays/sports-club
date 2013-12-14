@@ -64,7 +64,8 @@ WHERE id = @id" onupdating="SqlDataSource1_Updating1">
 <asp:Button ID="Button5" class="headerbutton" runat="server" Text="Credit Card Info" />
 <asp:Button ID="Button6" class="headerbutton" runat="server" Text="Gift Card Info" />
 <asp:Button ID="Button7" class="headerbutton" runat="server" Text="My Reviews" />
-<asp:Button ID="Button8" class="headerbutton" runat="server" Text="My Sales" />
+<asp:Button ID="Button8" class="headerbutton" runat="server" Text="Sell Items" 
+        onclick="Button8_Click" />
 </fieldset>
 <br />
 </div>

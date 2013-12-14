@@ -29,4 +29,8 @@ public partial class ContentPages_myaccount : System.Web.UI.Page
     {
         SettingsUpdatedMessage.Visible = true;
     }
+    protected void Button8_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddItem.aspx");
+    }
 }
